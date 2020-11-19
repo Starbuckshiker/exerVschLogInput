@@ -1,10 +1,33 @@
-var inputBox = document.getElementById("text-input")
-    console.log(inputBox);
- 
+const entryForm = document.getElementById('entryForm');
 
-var getInputValue = inputBox
-function handleButtonClick(){
-    console.log()
+
+const entriesSection = document.getElementById('entries');
+
+
+const entryTextbox = document.getElementsByClassName('entry-textbox');
+
+
+
+
+function addEntryToDom(event) {
+
+ event.preventDefault();
+
+
+const entryDiv = document.createElement('div');
+
+
+ entryDiv.className = 'single-entry';
+
+
+ entryDiv.innerText = entryTextbox[0].value;
+
+ entriesSection.appendChild(entryDiv);
+
 }
-inputBox.addEventListener("click", handleButtonClick())
-console.log(text-input)
+
+
+
+
+entryForm.addEventListener('submit', addEntryToDom)
+console.log("That was interesint")
